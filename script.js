@@ -1,11 +1,9 @@
-// index.js
 
 function evaluateChecklist() {
   const form = document.getElementById('checklist-form');
   const resultElement = document.getElementById('checklist-result');
   let score = 0;
 
-  // Iterate through each checkbox to calculate score
   const checkboxes = form.querySelectorAll('input[type="checkbox"]');
   checkboxes.forEach((checkbox) => {
       if (checkbox.checked) {
@@ -13,7 +11,6 @@ function evaluateChecklist() {
       }
   });
 
-  // Display result based on score
   if (score === 0) {
       resultElement.textContent = "현재 기억력에 문제가 없어 보입니다. 계속 건강한 생활을 유지하세요!";
   } else if (score <= 2) {
