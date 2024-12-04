@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>치매 예방 웹사이트</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 자가진단 체크리스트 -->
+    <section id="self-checklist">
+        <h2>자가진단 체크리스트</h2>
+        <form id="checklist-form">
+            <label>
+                <input type="checkbox" name="question1"> 최근에 잦은 물건 분실을 경험하고 있나요?
+            </label><br>
+            <label>
+                <input type="checkbox" name="question2"> 가까운 친구나 가족의 이름을 자주 잊어버리나요?
+            </label><br>
+            <label>
+                <input type="checkbox" name="question3"> 최근 계획을 세우고 그 계획을 기억하지 못한 적이 있나요?
+            </label><br>
+            <button type="button" onclick="evaluateChecklist()">진단하기</button>
+        </form>
+        <p id="checklist-result"></p>
+    </section>
+
+    <!-- 치매 예방에 좋은 음식 목록 -->
+    <section id="food-list">
+        <h2>치매 예방에 좋은 음식 목록</h2>
+        <ul>
+            <li>블루베리 - 항산화 성분이 풍부해 뇌 건강에 좋습니다.</li>
+            <li>연어 - 오메가-3가 풍부하여 뇌 세포를 보호합니다.</li>
+            <li>녹차 - 신경 보호 효과가 있어 치매 예방에 도움이 됩니다.</li>
+        </ul>
+    </section>
+
+    <!-- 치매 예방에 좋은 수칙 및 유튜브 링크 -->
+    <section id="prevention-links">
+        <h3>치매 예방에 좋은 수칙</h3>
+        <p><a href="https://www.nhis.or.kr/static/alim/paper/oldpaper/202309/sub/section1_4.html" target="_blank">치매 예방에 좋은 수칙</a>을 클릭하여 더 많은 정보를 확인하세요.</p>
+    </section>
+
+    <!-- 치매 예방에 좋은 두뇌운동 유튜브 링크 -->
+    <section id="brain-exercise">
+        <h3>치매 예방에 좋은 두뇌운동 유튜브</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/UoJHNkvej_w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+    <!-- JavaScript 연결 -->
+    <script src="script.js"></script>
+</body>
+</html>
