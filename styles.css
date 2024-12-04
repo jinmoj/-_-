@@ -91,3 +91,34 @@ iframe {
   margin-top: 20px;
   color: #e74c3c;
 }
+
+/* 메뉴(네비게이션) */
+body {
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  text-align: center;
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #f0f8ff;
+  color: #333;
+  border-radius: 25px; 
+  font-weight: bold;
+
+}
