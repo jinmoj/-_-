@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카드 맞추기 게임</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+      margin: 0;
+    }
+    .game-board {
+      display: grid;
+      grid-template-columns: repeat(4, 150px);
+      gap: 10px;
+      justify-content: center;
+    }
+    .card {
+      width: 150px;
+      height: 150px;
+      background-color: #3498db;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+    .card.flipped {
+      background-color: #ecf0f1;
+      color: #3498db;
+      transform: rotateY(180deg);
+    }
+    .card.matched {
+      background-color: #2ecc71;
+      color: white;
+    }
+    .message {
+      font-size: 1.5em;
+      text-align: center;
+      margin-top: 20px;
+      color: #e74c3c;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="game-board" id="gameBoard">
+  </div>
+  <div class="message" id="message"></div>
+
+  <script>
+    const cardValues = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+    let shuffledCards = [...cardValues, ...cardValues];  
+    shuffledCards = shuffledCards.sort(() => Math.random() - 0.5);  
+
+    let flippedCards = [];
+    let matchedCards = [];
+    let moves = 0;
+
+    const gameBoard = document.getElementById('gameBoard');
+    shuffledCards.forEach((value, index) => {
+      const card = document.createElement('div');
+      card.classList.add('card');
+      card.setAttribute('data-index', index);
+      card.dataset.value = value;
+      card.addEventListener('click', flipCard);
+      gameBoard.appendChild(card);
+    });
+
+    function flipCard(event) {
+      const clickedCard = event.target;
+      
+      if (flippedCards.length === 2 || clickedCard.classList.contains('flipped') || clickedCard.classList.contains('matched')) {
+        return;
+      }
+      
+      clickedCard.classList.add('flipped');
+      clickedCard.textContent = clickedCard.dataset.value;
+      flippedCards.push(clickedCard);
+      
+      if (flippedCards.length === 2) {
+        moves++;
+        setTimeout(() => checkMatch(), 1000);
+      }
+    }
+
+    function checkMatch() {
+      if (flippedCards[0].dataset.value === flippedCards[1].dataset.value) {
+        flippedCards[0].classList.add('matched');
+        flippedCards[1].classList.add('matched');
+        matchedCards.push(flippedCards[0], flippedCards[1]);
+        flippedCards = [];
+        
+        if (matchedCards.length === shuffledCards.length) {
+          setTimeout(() => displayMessage('게임 종료!'), 500);
+        }
+      } else {
+        flippedCards[0].classList.remove('flipped');
+        flippedCards[1].classList.remove('flipped');
+        flippedCards[0].textContent = '';
+        flippedCards[1].textContent = '';
+        flippedCards = [];
+      }
+    }
+
+    function displayMessage(message) {
+      const messageDiv = document.getElementById('message');
+      messageDiv.textContent = message;
+    }
+  </script>
+
+</body>
+</html>
