@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>치매 자가진단</title>
+  
+</head>
+<body>
+
+  <header>
+    <h1>치매 자가진단</h1>
+  </header>
+
+  <div class="container">
+    <p class="intro">
+      아래 체크리스트를 보고 자신에게 해당하는 항목에 체크를 해주세요.</p>
+
+    <form id="checklist-form" class="checklist">
+      <label><input type="checkbox" id="q1"> 당신의 기억력에 문제가 있습니까?</label><br>
+      <label><input type="checkbox" id="q2"> 당신의 기억력은 10년 전에 비해 저하되었습니까?</label><br>
+      <label><input type="checkbox" id="q3"> 당신의 기억력이 동년의 다른 사람들에 비해 나쁘다고 생각합니까?</label><br>
+      <label><input type="checkbox" id="q4"> 당신은 기억력 저하로 일상생활에 불편을 느끼십니까?</label><br>
+      <label><input type="checkbox" id="q5"> 당신은 최근에 일어난 일을 기억하는 것이 어렵습니까?</label><br>
+      <label><input type="checkbox" id="q6"> 당신은 며칠 전에 나눈 대화 내용을 기억하는 것이 어렵습니까?</label><br>
+      <label><input type="checkbox" id="q7"> 당신은 며칠 전에 한 약속을 기억하기 어렵습니까?</label><br>
+      <label><input type="checkbox" id="q8"> 당신의 친한 사람의 이름을 기억하기 어렵습니까?</label><br>
+      <label><input type="checkbox" id="q9"> 당신은 물건을 둔 곳을 기억하기 어렵습니까?</label><br>
+      <label><input type="checkbox" id="q10"> 당신은 이전에 비해 물건을 자주 잃어버립니까?</label><br>
+      <label><input type="checkbox" id="q11"> 당신은 집 근처에서 길을 잃은 적이 있습니까?</label><br>
+      <label><input type="checkbox" id="q12"> 당신은 사려고 하는 두세가지 물건 이름을 기억하기 어렵습니까?</label><br>
+      <label><input type="checkbox" id="q13"> 당신은 가스불이나 전깃불을 끄는 것을 기억하기 어렵습니까?</label><br>
+      <label><input type="checkbox" id="q14"> 당신은 자주 사용하는 전화번호(자신 혹은 자녀)를 기억하기 어렵습니까?</label><br>
+    </form>
+
+    <button onclick="checkAnswers()">검사 결과 확인</button>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      let count = 0;
+      for (let i = 1; i <= 14; i++) {
+        if (document.getElementById('q' + i).checked) {
+          count++;
+        }
+      }
+
+      const resultDiv = document.getElementById('result');
+      if (count >= 6) {
+        resultDiv.innerHTML = "6개 이상 '예'로 체크되었습니다. 치매 조기 검진을 받으세요!";
+        resultDiv.style.color = "#e74c3c"; 
+      } else {
+        resultDiv.innerHTML = "치매 조기 검진이 필요하지 않습니다.";
+        resultDiv.style.color = "#2ecc71"; 
+      }
+    }
+  </script>
+  
+</body>
+</html>
