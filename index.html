@@ -6,18 +6,19 @@
     <title>치매 예방 웹사이트</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<!-- 메뉴 (네비게이션 바) -->
-<nav>
-    <ul>
-        <li><a href="#self-checklist">자가진단</a></li>
-        <li><a href="#food-list">음식 추천</a></li>
-        <li><a href="#habbit">취미 추천</a></li>
-        <li><a href="#prevention-links">치매 예방 수칙</a></li>
-        <li><a href="#brain-exercise">두뇌운동 유튜브</a></li>
-        <li><a href="#card-game">치매 예방 게임</a></li>
-    </ul>
-</nav>
 <body>
+    <!-- 상단의 메뉴 (네비게이션 바) -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#self-checklist">자가진단</a></li>
+            <li><a href="#food-list">음식 추천</a></li>
+            <li><a href="#habbit">취미 추천</a></li>
+            <li><a href="#prevention-links">치매 예방 수칙</a></li>
+            <li><a href="#brain-exercise">두뇌운동 유튜브</a></li>
+            <li><a href="#card-game">치매 예방 게임</a></li>
+        </ul>
+    </nav>
+
     <!-- 자가진단 체크리스트 -->
     <section id="self-checklist">
         <h2>자가진단 체크리스트</h2>
@@ -61,7 +62,7 @@
             <li>외국어 공부 - 주의력, 기억력을 담당하는 뇌 영역의 신경 연결망이 강화되어 뇌건강을 개선합니다.</li>
             <li>뜨개질 - 창의적 활동은 치매 위험을 낮춰줍니다.</li>
             <li>음악 감상, 악기 공부 - 시각과 청각 등 다양한 뇌 영역이 활성화되어 뇌 내 연결이 강화됩니다.</li>
-            <li>퍼증, 미로 게임 - 뇌의 집중력과 주의력이 강화됩니다.</li>
+            <li>퍼즐, 미로 게임 - 뇌의 집중력과 주의력이 강화됩니다.</li>
         </ul>
      </section>
     
@@ -72,8 +73,9 @@
     </section>
 
     <!-- 치매 예방에 좋은 두뇌운동 유튜브 링크 -->
-    <section id="brain-exercise">
+    <section id="brain-exercise" class="youtube-section">
         <h3>치매 예방에 좋은 두뇌운동 유튜브</h3>
+        <p>아래의 영상은 두뇌 건강에 도움을 주는 운동을 소개합니다.</p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/UoJHNkvej_w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
 
