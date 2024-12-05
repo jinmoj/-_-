@@ -75,3 +75,17 @@ function displayMessage(message) {
 const messageDiv = document.getElementById('message');
 messageDiv.textContent = message;
 }
+
+window.addEventListener('scroll', function () {
+  for (let i = 1; i <= 14; i++) {
+      const label = document.getElementById('q' + i).parentElement;
+      const rect = label.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 50) {
+          label.style.opacity = '1';
+          label.style.transform = 'translateY(0)';
+      } else {
+          label.style.opacity = '0';
+          label.style.transform = 'translateY(20px)';
+      }
+  }
+});
