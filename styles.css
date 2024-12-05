@@ -2,23 +2,29 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   padding: 20px;
   background: linear-gradient(to left, #d0e9ff, #ffffff);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
   margin-top: 40px;
 }
 
 .motivation-text {
   flex: 1;
   padding-right: 20px;
+  justify-content: center;
 }
 
 .motivation-text h2 {
   font-size: 1.8em;
   color: #8b4fc4;
   margin-bottom: 10px;
+}
+
+.motivation-text p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  margin-left: 300px;
 }
 
 .motivation-image img {
@@ -70,13 +76,31 @@ body {
   border-radius: 4px;
 }
 
+.checklist-container {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.checklist-container h2 {
+  padding: 15px;
+  background-color: #343c81;
+  color: #ffffff;
+  border-radius: 100px;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
 section {
-  max-width: 800px;
-  margin: 20px auto;
+  width: 100%;
+  margin: 0;
   padding: 20px;
   background: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   scroll-margin-top: 70px; /* Adjust for navbar offset */
 }
 
@@ -137,6 +161,10 @@ label input[type="checkbox"] {
   margin-right: 10px;
 }
 
+#self-checklist {
+  background-color: #b9e3ff
+}
+
 #checklist-result {
   margin-top: 20px;
   padding: 15px;
@@ -152,8 +180,8 @@ label input[type="checkbox"] {
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
+  margin: 0;
+  width: 100%;
 }
 
 .youtube-section h3 {
