@@ -318,3 +318,70 @@ iframe {
 #habbit li:nth-child(even) {
   background-color: #e7f7fe; 
 }
+
+/* 음식*/
+#food-list {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+#food-list h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.food-item {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.food-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.food-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.food-item h4 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.food-item p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+@media (max-width: 768px) {
+  #food-list h2 {
+      font-size: 1.5rem;
+  }
+
+  .food-item h4 {
+      font-size: 1rem;
+  }
+
+  .food-item p {
+      font-size: 0.8rem;
+  }
+}
