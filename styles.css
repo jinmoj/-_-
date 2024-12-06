@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .motivation-section {
   display: flex;
   align-items: center;
@@ -332,24 +336,39 @@ iframe {
 
 /* 음식*/
 #food-list {
-  padding: 40px 20px;
-  background-color: #f9f9f9;
+  margin-top: 60px;
+  margin-bottom: 70px;
+  padding: 100px 20px;
+  background-color: #9678c8;
+  border-radius: 50%;
 }
 
 #food-list h2 {
   text-align: center;
+  padding: 10px;
+  background-color: #343c81;
+  border-radius: 100px;
+  width: 40%;
+  margin: 50px auto;
   font-size: 2rem;
-  color: #333;
-  margin-bottom: 30px;
+  color: #ffffff;
 }
 
 .food-item {
+  width: 300px; /* 고정 가로 크기 */
   text-align: center;
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.food-item.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .food-item:hover {
@@ -374,11 +393,14 @@ iframe {
 .food-item p {
   font-size: 0.9rem;
   color: #666;
+  word-wrap: break-word;
+  white-space: normal;
+  line-height: 1.4;
 }
 
 .food-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-items: center;
 }
