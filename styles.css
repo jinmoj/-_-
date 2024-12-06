@@ -204,7 +204,7 @@ iframe {
 
 /* 카드 맞추기 게임 스타일 */
 #card-game {
-  background-color: #06305b; 
+  background-color: #093664; 
   color: white; 
   padding: 20px;
   border-radius: 8px;
@@ -216,7 +216,7 @@ iframe {
 #card-game h2 {
   color: #f1c40f;
   margin-bottom: 15px;
-  font-size: 1.5em; 
+  font-size: 2em; 
 }
 
 .game-board {
@@ -317,6 +317,17 @@ iframe {
 
 #habbit li:nth-child(even) {
   background-color: #e7f7fe; 
+}
+
+.hobby-item {
+  opacity: 0; 
+  transform: translateY(50px); 
+  transition: opacity 0.6s ease, transform 0.6s ease; 
+}
+
+.hobby-item.visible {
+  opacity: 1; 
+  transform: translateY(0);
 }
 
 /* 음식*/
