@@ -263,3 +263,58 @@ iframe {
   color: #e74c3c;
   margin-top: 15px;
 }
+
+/* 취미 */
+#habbit {
+  background-color: #f9f7f6; 
+  padding: 30px;
+  border-radius: 15px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  max-width: 800px;
+  margin: 30px auto; 
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+#habbit h2 {
+  text-align: center; 
+  font-size: 2rem; 
+  color: #4b6584; 
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#habbit ul {
+  list-style-type: none; 
+  padding: 0;
+}
+
+#habbit li {
+  background-color: #ffffff;
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px; 
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease; 
+}
+
+#habbit li:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+}
+
+#habbit li::before {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  color: #ff6b6b;
+}
+
+#habbit li:nth-child(odd) {
+  background-color: #fef8e7;
+}
+
+#habbit li:nth-child(even) {
+  background-color: #e7f7fe; 
+}
