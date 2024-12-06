@@ -101,3 +101,34 @@ document.addEventListener("scroll", () => {
       }
   });
 });
+
+//네비게이션 바
+document.querySelectorAll('.navbar a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+          window.scrollTo({
+              top: targetElement.getBoundingClientRect().top + window.pageYOffset - 60,
+              behavior: 'smooth'
+          });
+      }
+  });
+});
+
+//음식 목록
+document.addEventListener("scroll", () => {
+  const foodItems = document.querySelectorAll(".food-item");
+  const triggerBottom = window.innerHeight * 0.8;
+
+  foodItems.forEach(item => {
+    const itemTop = item.getBoundingClientRect().top;
+
+    if (itemTop < triggerBottom) {
+      item.classList.add("visible");
+    } else {
+      item.classList.remove("visible");
+    }
+  });
+});
