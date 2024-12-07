@@ -90,19 +90,24 @@ window.addEventListener('scroll', function () {
   }
 });
 
-// 스크롤
+//취미 스크롤
 document.addEventListener("scroll", () => {
   const hobbyItems = document.querySelectorAll(".hobby-item");
-  const triggerBottom = window.innerHeight * 0.8; 
+  const triggerBottom = window.innerHeight * 0.8;
+
   hobbyItems.forEach(item => {
-      const itemTop = item.getBoundingClientRect().top;
-      if (itemTop < triggerBottom) {
-          item.classList.add("visible"); 
-      }
+    const itemTop = item.getBoundingClientRect().top;
+
+    if (itemTop < triggerBottom) {
+      item.classList.add("visible");
+    } else {
+      item.classList.remove("visible");
+    }
   });
 });
 
-//네비게이션 바
+
+// 네비게이션 바
 document.querySelectorAll('.navbar a').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
       e.preventDefault();
