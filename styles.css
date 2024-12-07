@@ -182,14 +182,16 @@ label input[type="checkbox"] {
 .youtube-section {
   text-align: center;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #efdfd3;
   border-radius: 8px;
   margin: 0;
   width: 100%;
 }
 
 .youtube-section h3 {
-  color: #e74c3c;
+  color: #c99171;
+  font-weight: 900;
+  margin-top: 110px;
   margin-bottom: 20px;
   font-size: 1.5rem;
 }
@@ -197,12 +199,13 @@ label input[type="checkbox"] {
 .youtube-section p {
   font-size: 1.1em;
   margin-bottom: 15px;
+  color: #6d6d6d;
 }
 
 iframe {
   display: block;
-  margin: 0 auto;
-  border: none;
+  margin: 40px auto;
+  border: 6px solid #c99171;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -213,7 +216,7 @@ iframe {
   color: white; 
   padding: 20px;
   border-radius: 8px;
-  margin: 20px auto;
+  margin: 0 auto;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
@@ -221,7 +224,8 @@ iframe {
 #card-game h2 {
   color: #f1c40f;
   margin-bottom: 15px;
-  font-size: 2em; 
+  font-size: 2em;
+  margin-top: 150px;
 }
 
 .game-board {
@@ -267,6 +271,7 @@ iframe {
   text-align: center;
   color: #e74c3c;
   margin-top: 15px;
+  margin-bottom: 90px;
 }
 
 /* 취미 */
@@ -327,12 +332,25 @@ iframe {
 .hobby-item {
   opacity: 0; 
   transform: translateY(50px); 
-  transition: opacity 0.6s ease, transform 0.6s ease; 
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  display: flex;
+  align-items: center; /* 이미지와 텍스트를 수직으로 정렬 */
+  margin-bottom: 15px; /* 리스트 간격 */
 }
 
 .hobby-item.visible {
   opacity: 1; 
   transform: translateY(0);
+}
+
+.hobby-icon {
+  width: 60px; /* 아이콘 크기 */
+  height: 60px; /* 아이콘 크기 */
+  margin-right: 10px; /* 이미지와 텍스트 사이의 간격 */
+  border-radius: 50%; /* 원형 아이콘 (선택사항) */
+  background-color: #f9f2e4; /* 배경색 (선택사항) */
+  padding: 3px; /* 이미지 주위 여백 (선택사항) */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
 }
 
 /* 음식*/
@@ -356,7 +374,7 @@ iframe {
 }
 
 .food-item {
-  width: 300px; /* 고정 가로 크기 */
+  width: 300px;
   text-align: center;
   background-color: #fff;
   border-radius: 10px;
@@ -425,7 +443,7 @@ iframe {
   background-color: #fff;
   padding: 50px 20px;
   margin-top: 150px;
-  margin-bottom: 120px;
+  margin-bottom: 0;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
