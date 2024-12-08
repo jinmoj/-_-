@@ -360,17 +360,24 @@ iframe {
   padding: 100px 20px;
   background-color: #9678c8;
   border-radius: 50%;
+  text-align: center; 
 }
 
 #food-list h2 {
-  text-align: center;
-  padding: 10px;
+  display: inline-block; 
+  padding: 10px 20px; 
   background-color: #343c81;
   border-radius: 100px;
-  width: 40%;
-  margin: 50px auto;
   font-size: 2rem;
   color: #ffffff;
+  margin: 0 0 40px 0; 
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
 }
 
 .food-item {
